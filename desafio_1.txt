@@ -1,0 +1,49 @@
+Desafio 1 
+
+int INDICE = 13, SOMA = 0, K = 0;
+
+enquanto K < INDICE faça
+
+{
+
+K = K + 1;
+
+SOMA = SOMA + K;
+
+}
+
+imprimir(SOMA);
+
+
+Nesse desafio o INDICE é 13, SOMA é 0 e K é 0;
+Ele define que enquanto K for menor que INDICE (13) o código vai somar 1 ao valor anterior de K;
+Em seguida irá atribuir a SOMA o valor de SOMA + K;
+Por fim ao sair do loop While ele vai imprimir o valor de SOMA;
+
+Na primeira vez:
+
+K = 1
+SOMA = 1
+
+Segunda vez:
+
+K = 2
+SOMA = 3
+
+Terceira vez:
+
+K = 3
+SOMA = 6
+
+
+Fazer tudo isso seria muito trabalhoso, por isso ao observar a sequência dá para perceber uma PA na operação SOMA/K em que a razão é 0,5 , ou seja, a cada vez que o loop While ocorre, o valor de SOMA/K aumenta em 0.5, sendo assim basta verificar que o loop vai ocorrer por 13 vezes antes de parar, e que o valor inicial de SOMA/K é 1. Com esses dados é só aplicar na matematica: 
+
+an = a1 + r * (n-1)  <-- Formula para trabalhar com PA.
+
+a13 = 1 + 0,5 * (13 - 1)   -->   a13 = 1 + 0,5 * 12   -->   a13 = 1 + 6   -->   a13 = 7
+
+Como o 13º valor deu 7, e sabemos que o valor de K é 13 na ultima vez que o Wile rodar, então faremos 7 = SOMA / 13:
+
+7 = SOMA / 13    -->   7*13 = SOMA   -->    SOMA = 91
+
+O valor impresso vai ser 91.
